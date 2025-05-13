@@ -1,16 +1,23 @@
 class Dog:
-    def __init__(self, name, breed):
+    def __init__(self, name, breed, owner):
         self.name = name
         self.breed = breed
+        self.owner = owner
     def bark(self):
         print("Whoof Whoof")
         
-dog1 = Dog("Bruce", "Scottish Terrier")
-dog1.bark()
-print(dog1.name)
-print(dog1.breed)
+        
+class Owner:
+    def __init__(self, name, address, contact_number):
+        self.name = name
+        self.address = address
+        self.phone_number = contact_number
+        
+        
+owner1 = Owner("Arnaud", "666 rue des enfers", "666-666-666")   
+dog1 = Dog("Bruce", "Scottish Terrier", owner1)
+print(dog1.owner.name)
 
-dog2 = Dog("Freya", "Greyhound")
-dog2.bark()
-print(dog2.name)
-print(dog2.breed)
+owner2 = Owner("DJ Nocide", "6 rue des enfers", "666-808-555")
+dog2 = Dog("Freya", "Greyhound", owner2)
+print(dog2.owner.name)
